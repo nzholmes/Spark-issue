@@ -7,9 +7,9 @@ Ipython: 4.0.1__
 
 ### How to set up environment for Spark on Mac
 
- - `cd` <spark directory>
+ - `cd`  <spark directory>
  
- -	Create soft link to point to <spark directory>, `ln -s <spark directory> <linked directory>`. Doing so avoids changing e    nvironmental variables or path in some cases like updating older version to new version. A change in the soft link makes everything easy.
+ -	Create soft link to point to `<spark directory>`, `ln -s <spark directory> <linked directory>`. Doing so avoids changing e    nvironmental variables or path in some cases like updating older version to new version. A change in the soft link makes everything easy.
  
  - (Create and) Edit `.profile` or `.bash_profile` using  `vi` or `nano`. In the profile, add path: `export SPARK_HOME=<soft linked spark directory>`
 `export PATH=$PATH:$SPARK_HOME/bin:$SPARK_HOME/sbin`
@@ -21,7 +21,7 @@ Ipython: 4.0.1__
 More in video: [https://www.youtube.com/watch?v=7AcStx0SXSo](https://www.youtube.com/watch?v=7AcStx0SXSo) or [http://blog.jobbole.com/86232/](http://blog.jobbole.com/86232/)
 
 
-How to integrate pyspark with Jupyter notebook
+### How to integrate pyspark with Jupyter notebook
 
 Start notebook from terminal by typing jupyter (ipython notebook)
 
