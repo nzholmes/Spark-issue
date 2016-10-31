@@ -44,7 +44,7 @@ More in video: [https://www.youtube.com/watch?v=7AcStx0SXSo](https://www.youtube
 
 More details in [http://litaotao.github.io/ipython-notebook-spark?s=inner](http://litaotao.github.io/ipython-notebook-spark?s=inner), [http://blog.jobbole.com/86232](http://blog.jobbole.com/86232)
 
-All of these just work for ipython. If you want it to work for jupyter, add more steps on the basis of previous ones.
+2. All of these just work for ipython. If you want it to work for jupyter, add more steps on the basis of previous ones.
 
 First make sure you understand the concept of kernelspecs in ipython: the kernels that ipython notebook uses at the moment of being started. Kernelspecs usually are folders and resides in `~/.ipython/kernels`. 
 
@@ -68,7 +68,7 @@ First make sure you understand the concept of kernelspecs in ipython: the kernel
 ```
  More in [http://thepowerofdata.io/configuring-jupyteripython-notebook-to-work-with-pyspark-1-4-0/](http://thepowerofdata.io/configuring-jupyteripython-notebook-to-work-with-pyspark-1-4-0/) or [http://limdauto.github.io/posts/2015-12-24-spark-ipython-notebook.html](http://limdauto.github.io/posts/2015-12-24-spark-ipython-notebook.html)
  
-2. Directly add kernel spec in jupyter 
+3. Directly add kernel spec in jupyter 
 
 Reference: [https://arnesund.com/2015/09/21/spark-cluster-on-openstack-with-multi-user-jupyter-notebook/](https://arnesund.com/2015/09/21/spark-cluster-on-openstack-with-multi-user-jupyter-notebook/) or [http://www.davidgreco.me/blog/2015/12/24/how-to-use-jupyter-with-spark-kernel-and-cloudera-hadoop-slash-spark](http://www.davidgreco.me/blog/2015/12/24/how-to-use-jupyter-with-spark-kernel-and-cloudera-hadoop-slash-spark)
 
@@ -124,7 +124,7 @@ EOF
 ```
 
 
-3. Start from terminal using command pyspark
+4. Start from terminal using command pyspark
 
    *  Edit bash_profile using nano .bash_profile. 
    *	 Add the follwing in the file 
@@ -153,14 +153,12 @@ More in [http://stackoverflow.com/a/33065359](http://stackoverflow.com/a/3306535
 
       1. On Spark clients (systems from which you intend to launch Spark jobs), do the following:
       
-         Create <soft linked spark directory>/conf/spark-defaults.conf on the Spark client:
+         * Create <soft linked spark directory>/conf/spark-defaults.conf on the Spark client:
          `cp <soft linked spark directory>/conf/spark-defaults.conf.template /<soft linked spark directory>/conf/spark-defaults.conf`
-         Add `spark.driver.memory=2g(or the amount you want to allocate)` to `<soft linked spark directory>/conf/spark-defaults.conf`.
+         * Add `spark.driver.memory=2g(or the amount you want to allocate)` to `<soft linked spark directory>/conf/spark-defaults.conf`.
          
 
-or
-
-      2.  Start from terminal
+      2. Start from terminal
      
        `$ ./bin/spark-shell(pyspark) --driver-memory 2g`
 
