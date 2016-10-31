@@ -1,9 +1,9 @@
 
 The versions of Spark, Jupyter and Ipython at the moment of writing
 
-* __Spark: 2.0.0__
-* __Jupyter: 4.1.1__
-* __Ipython: 4.0.1__
+* Spark: 2.0.0
+* Jupyter: 4.1.1
+* Ipython: 4.0.1
 
 ### How to set up environment for Spark on Mac
 
