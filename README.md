@@ -26,9 +26,10 @@ More in video: [https://www.youtube.com/watch?v=7AcStx0SXSo](https://www.youtube
 1. Start notebook from terminal by typing jupyter (ipython notebook)
 
       From what I have read so far, the method that works for ipython is 
-        * first creating a ipython profile, `ipython profile create pyspark`;
-        * add a startup file, `$ touch ~/.ipython/profile_spark/startup/00-spark-setup.py`;
-        * add environment variables in startup file;
+      
+      * first creating a ipython profile, `ipython profile create pyspark`;
+      * add a startup file, `$ touch ~/.ipython/profile_spark/startup/00-spark-setup.py`;
+      * add environment variables in startup file;
 
           ```
           import os
@@ -40,7 +41,7 @@ More in video: [https://www.youtube.com/watch?v=7AcStx0SXSo](https://www.youtube
           execfile(os.path.join(spark_home, 'python/pyspark/shell.py'))
           ```
 
-        * finaly start `ipython --profile=spark`.
+       * finaly start `ipython --profile=spark`.
 
       More details in [http://litaotao.github.io/ipython-notebook-spark?s=inner](http://litaotao.github.io/ipython-notebook-spark?s=inner), [http://blog.jobbole.com/86232](http://blog.jobbole.com/86232)
 
@@ -48,11 +49,9 @@ More in video: [https://www.youtube.com/watch?v=7AcStx0SXSo](https://www.youtube
 
       First make sure you understand the concept of kernelspecs in ipython: the kernels that ipython notebook uses at the moment of being started. Kernelspecs usually are folders and resides in `~/.ipython/kernels`. 
 
-      `$ mkdir -p ~/.ipython/kernels/spark # create a new kernelspec named spark`
-
-      `$ touch ~/.ipython/kernels/spark/kernel.json # add kernel file`
-
       ```
+      $ mkdir -p ~/.ipython/kernels/spark # create a new kernelspec named spark
+      $ touch ~/.ipython/kernels/spark/kernel.json # add kernel file
       {
           "display_name": "PySpark (Spark 1.5.2)", 
           "language": "python",
@@ -99,9 +98,8 @@ More in video: [https://www.youtube.com/watch?v=7AcStx0SXSo](https://www.youtube
 
      All of these can also be achieved using terminal command:
 
-     `sudo mkdir -p /usr/local/share/jupyter/kernels/pyspark/`
-
      ```
+     sudo mkdir -p /usr/local/share/jupyter/kernels/pyspark/
      cat <<EOF | sudo tee /usr/local/share/jupyter/kernels/pyspark/kernel.json
      {
       "display_name": "PySpark",
@@ -128,10 +126,11 @@ More in video: [https://www.youtube.com/watch?v=7AcStx0SXSo](https://www.youtube
 
      *  Edit bash_profile using nano .bash_profile. 
      *	 Add the follwing in the file 
+     
      ```
-     "export PATH=<soft linked directory> "
-     "export PYSPARK_DRIVER_PYTHON=jupyter"
-     "export PYSPARK_DRIVER_PYTHON_OPTS='notebook' pyspark"
+     export PATH=<soft linked directory>
+     export PYSPARK_DRIVER_PYTHON=jupyter
+     export PYSPARK_DRIVER_PYTHON_OPTS='notebook' pyspark
      ```
      *	Make these environment variables available by `source .profile`
      *	Check using command `pyspark`
@@ -154,7 +153,9 @@ More in video: [https://www.youtube.com/watch?v=7AcStx0SXSo](https://www.youtube
       1. On Spark clients (systems from which you intend to launch Spark jobs), do the following:
       
          * Create <soft linked spark directory>/conf/spark-defaults.conf on the Spark client:
+         
          `cp <soft linked spark directory>/conf/spark-defaults.conf.template /<soft linked spark directory>/conf/spark-defaults.conf`
+         
          * Add the following to `<soft linked spark directory>/conf/spark-defaults.conf`:
           `spark.driver.memory=2g(or the amount you want to allocate)`.
          
