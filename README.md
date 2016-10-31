@@ -9,10 +9,13 @@ The versions of Spark, Jupyter and Ipython at the moment of writing
 
  - Go to spark directory using command `cd <spark directory>`. For example, `cd spark-2.0.0-bin-hadoop2.7`
  
- -	Create soft link to point to `<spark directory>`, `ln -s <spark directory> <linked directory>`. Doing so avoids changing e    nvironmental variables or path in some cases like updating older version to new version. A change in the soft link makes everything easy.
+ -	Create soft link to point to `<spark directory>`, `ln -s <spark directory> <linked directory>`. Doing so avoids changing environmental variables or path in some cases like updating older version to new version. 
  
- - (Create and) Edit `.profile` or `.bash_profile` using  `vi` or `nano`. In the profile, add path: `export SPARK_HOME=<soft linked spark directory>`
-`export PATH=$PATH:$SPARK_HOME/bin:$SPARK_HOME/sbin`
+ - (Create and) Edit `.profile` or `.bash_profile` using  `vi` or `nano`. In the profile, add path: 
+ ```
+ export SPARK_HOME=<soft linked spark directory>
+ export PATH=$PATH:$SPARK_HOME/bin:$SPARK_HOME/sbin
+ ```
 
  - Return to terminal and input the command `~/.profile` or `source. profile` to make this work. Use `echo $PATH` or `echo $SPARK_HOME` to check.
 
@@ -41,7 +44,7 @@ More in video: [https://www.youtube.com/watch?v=7AcStx0SXSo](https://www.youtube
           ```
       * finaly start using `ipython --profile=spark`.
 
-      More details in [http://litaotao.github.io/ipython-notebook-spark?s=inner](http://litaotao.github.io/ipython-notebook-spark?s=inner), [http://blog.jobbole.com/86232](http://blog.jobbole.com/86232)
+     More details in [http://litaotao.github.io/ipython-notebook-spark?s=inner](http://litaotao.github.io/ipython-notebook-spark?s=inner), [http://blog.jobbole.com/86232](http://blog.jobbole.com/86232)
 
 2. All of these just work for ipython. If you want it to work for jupyter, add more steps on the basis of previous ones.
 
