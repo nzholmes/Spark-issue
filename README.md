@@ -7,7 +7,7 @@ Ipython: 4.0.1__
 
 ### How to set up environment for Spark on Mac
 
- - `cd  `<spark directory>`
+ - Go to spark directory using comman `cd <spark directory>`
  
  -	Create soft link to point to `<spark directory>`, `ln -s <spark directory> <linked directory>`. Doing so avoids changing e    nvironmental variables or path in some cases like updating older version to new version. A change in the soft link makes everything easy.
  
