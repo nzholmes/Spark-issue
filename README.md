@@ -30,7 +30,8 @@ More in video: [https://www.youtube.com/watch?v=7AcStx0SXSo](https://www.youtube
     * add a startup file, `$ touch ~/.ipython/profile_spark/startup/00-spark-setup.py`;
     * add environment variables in startup file
 
-       ```import os
+       ```
+       import os
        import sys
 
        spark_home = os.environ.get('SPARK_HOME', None)
