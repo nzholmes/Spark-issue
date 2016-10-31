@@ -40,7 +40,6 @@ More in video: [https://www.youtube.com/watch?v=7AcStx0SXSo](https://www.youtube
           sys.path.insert(0, os.path.join(spark_home, 'python/lib/py4j-0.8.2.1-src.zip'))
           execfile(os.path.join(spark_home, 'python/pyspark/shell.py'))
           ```
-
        * finaly start `ipython --profile=spark`.
 
       More details in [http://litaotao.github.io/ipython-notebook-spark?s=inner](http://litaotao.github.io/ipython-notebook-spark?s=inner), [http://blog.jobbole.com/86232](http://blog.jobbole.com/86232)
@@ -141,7 +140,8 @@ More in video: [https://www.youtube.com/watch?v=7AcStx0SXSo](https://www.youtube
   
   - Pyspark: Exception: Java gateway process exited before sending the driver its port number
    
-    [http://stackoverflow.com/a/36367669](http://stackoverflow.com/a/36367669) 
+    [http://stackoverflow.com/a/36367669](http://stackoverflow.com/a/36367669)
+    
     Solution: There is a change in python/pyspark/java_gateway.py , which requires PYSPARK_SUBMIT_ARGS includes pyspark-shell if a PYSPARK_SUBMIT_ARGS variable is set by a user. `export PYSPARK_SUBMIT_ARGS="--master local[2] pyspark-shell" `
 
   - How to allocate more memory to executor memory in local mode
