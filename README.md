@@ -7,7 +7,7 @@ Ipython: 4.0.1__
 
 ### How to set up environment for Spark on Mac
 
- - Go to spark directory using comman `cd <spark directory>`
+ - Go to spark directory using command `cd <spark directory>`. For example, `cd spark-2.0.0-bin-hadoop2.7`
  
  -	Create soft link to point to `<spark directory>`, `ln -s <spark directory> <linked directory>`. Doing so avoids changing e    nvironmental variables or path in some cases like updating older version to new version. A change in the soft link makes everything easy.
  
@@ -23,24 +23,25 @@ More in video: [https://www.youtube.com/watch?v=7AcStx0SXSo](https://www.youtube
 
 ### How to integrate pyspark with Jupyter notebook
 
-Start notebook from terminal by typing jupyter (ipython notebook)
+1. Start notebook from terminal by typing jupyter (ipython notebook)
 
-From what I have read so far, the method that works for ipython is 
-first creating a ipython profile, ipython profile create pyspark;
-add a startup file, $ touch ~/.ipython/profile_spark/startup/00-spark-setup.py;
-add environment variables in startup file;
+  From what I have read so far, the method that works for ipython is 
+    * first creating a ipython profile, `ipython profile create pyspark`;
+    * add a startup file, `$ touch ~/.ipython/profile_spark/startup/00-spark-setup.py`;
+    * add environment variables in startup file
 
-import os
-import sys
+       ```import os
+       import sys
 
-spark_home = os.environ.get('SPARK_HOME', None)
-sys.path.insert(0, os.path.join(spark_home, 'python'))
-sys.path.insert(0, os.path.join(spark_home, 'python/lib/py4j-0.8.2.1-src.zip'))
-execfile(os.path.join(spark_home, 'python/pyspark/shell.py'))
+       spark_home = os.environ.get('SPARK_HOME', None)
+       sys.path.insert(0, os.path.join(spark_home, 'python'))
+       sys.path.insert(0, os.path.join(spark_home, 'python/lib/py4j-0.8.2.1-src.zip'))
+       execfile(os.path.join(spark_home, 'python/pyspark/shell.py'))
+       ```
 
-finaly start ipython --profile=spark.
+   * finaly start `ipython --profile=spark`.
 
-More details in http://litaotao.github.io/ipython-notebook-spark?s=inner, http://blog.jobbole.com/86232/
+More details in [http://litaotao.github.io/ipython-notebook-spark?s=inner](http://litaotao.github.io/ipython-notebook-spark?s=inner), [http://blog.jobbole.com/86232](http://blog.jobbole.com/86232)
 
 All of these just work for ipython. If you want it to work for jupyter, add more steps on the basis of previous ones.
 First make sure you understand the concept of kernelspecs in ipython: the kernels that ipython notebook uses at the moment of being started. Kernelspecs usually are folders and resides in ~/.ipython/kernels. 
