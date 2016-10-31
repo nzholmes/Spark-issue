@@ -1,9 +1,9 @@
 
 The versions of Spark, Jupyter and Ipython at the moment of writing
 
-__Spark: 2.0.0__
-__Jupyter: 4.1.1__
-__Ipython: 4.0.1__
+* __Spark: 2.0.0__
+* __Jupyter: 4.1.1__
+* __Ipython: 4.0.1__
 
 ### How to set up environment for Spark on Mac
 
@@ -39,7 +39,7 @@ More in video: [https://www.youtube.com/watch?v=7AcStx0SXSo](https://www.youtube
           sys.path.insert(0, os.path.join(spark_home, 'python/lib/py4j-0.8.2.1-src.zip'))
           execfile(os.path.join(spark_home, 'python/pyspark/shell.py'))
           ```
-      * finaly start `ipython --profile=spark`.
+      * finaly start using `ipython --profile=spark`.
 
       More details in [http://litaotao.github.io/ipython-notebook-spark?s=inner](http://litaotao.github.io/ipython-notebook-spark?s=inner), [http://blog.jobbole.com/86232](http://blog.jobbole.com/86232)
 
