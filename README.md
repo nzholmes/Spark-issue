@@ -44,7 +44,7 @@ More in video: [https://www.youtube.com/watch?v=7AcStx0SXSo](https://www.youtube
           ```
       * finaly start using `ipython --profile=spark`.
 
-     More details in [http://litaotao.github.io/ipython-notebook-spark?s=inner](http://litaotao.github.io/ipython-notebook-spark?s=inner), [http://blog.jobbole.com/86232](http://blog.jobbole.com/86232)
+   More details in [http://litaotao.github.io/ipython-notebook-spark?s=inner](http://litaotao.github.io/ipython-notebook-spark?s=inner), [http://blog.jobbole.com/86232](http://blog.jobbole.com/86232)
 
 2. All of these just work for ipython. If you want it to work for jupyter, add more steps on the basis of previous ones.
 
