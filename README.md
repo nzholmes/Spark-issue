@@ -29,7 +29,7 @@ More in video: [https://www.youtube.com/watch?v=7AcStx0SXSo](https://www.youtube
       
       * first creating a ipython profile, `ipython profile create pyspark`;
       * add a startup file, `$ touch ~/.ipython/profile_spark/startup/00-spark-setup.py`;
-      * add environment variables in startup file;
+      * add the following in startup file:
 
           ```
           import os
@@ -135,7 +135,7 @@ More in video: [https://www.youtube.com/watch?v=7AcStx0SXSo](https://www.youtube
      *	Make these environment variables available by `source .profile`
      *	Check using command `pyspark`
 
-     More in [http://stackoverflow.com/a/33065359](http://stackoverflow.com/a/33065359) or [https://www.youtube.com/watch?v=I5JtvpyM14U](ttps://www.youtube.com/watch?v=I5JtvpyM14U)
+    More in [http://stackoverflow.com/a/33065359](http://stackoverflow.com/a/33065359) or [https://www.youtube.com/watch?v=I5JtvpyM14U](ttps://www.youtube.com/watch?v=I5JtvpyM14U)
 
 ### Spark issues 
   
