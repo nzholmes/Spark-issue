@@ -7,7 +7,7 @@ Ipython: 4.0.1__
 
 ### How to set up environment for Spark on Mac
 
- - `cd`  <spark directory>
+ - `cd  `<spark directory>`
  
  -	Create soft link to point to `<spark directory>`, `ln -s <spark directory> <linked directory>`. Doing so avoids changing e    nvironmental variables or path in some cases like updating older version to new version. A change in the soft link makes everything easy.
  
@@ -16,7 +16,7 @@ Ipython: 4.0.1__
 
  - Return to terminal and input the command `~/.profile` or `source. profile` to make this work. Use `echo $PATH` or `echo $SPARK_HOME` to check.
 
- - Input command pyspark or spark-shell to check.
+ - Input command `pyspark` or `spark-shell` to check.
 
 More in video: [https://www.youtube.com/watch?v=7AcStx0SXSo](https://www.youtube.com/watch?v=7AcStx0SXSo) or [http://blog.jobbole.com/86232/](http://blog.jobbole.com/86232/)
 
