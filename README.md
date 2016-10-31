@@ -30,7 +30,6 @@ More in video: [https://www.youtube.com/watch?v=7AcStx0SXSo](https://www.youtube
       * first creating a ipython profile, `ipython profile create pyspark`;
       * add a startup file, `$ touch ~/.ipython/profile_spark/startup/00-spark-setup.py`;
       * add the following in startup file:
-
           ```
           import os
           import sys
@@ -142,7 +141,7 @@ More in video: [https://www.youtube.com/watch?v=7AcStx0SXSo](https://www.youtube
    
     [http://stackoverflow.com/a/36367669](http://stackoverflow.com/a/36367669)
     
-    Solution: There is a change in python/pyspark/java_gateway.py , which requires PYSPARK_SUBMIT_ARGS includes pyspark-shell if a PYSPARK_SUBMIT_ARGS variable is set by a user. `export PYSPARK_SUBMIT_ARGS="--master local[2] pyspark-shell" `
+    Solution: There is a change in `python/pyspark/java_gateway.py`, which requires `PYSPARK_SUBMIT_ARGS` includes `pyspark-shell` if a `PYSPARK_SUBMIT_ARGS` variable is set by a user. `export PYSPARK_SUBMIT_ARGS="--master local[2] pyspark-shell" `
 
   - How to allocate more memory to executor memory in local mode
 
