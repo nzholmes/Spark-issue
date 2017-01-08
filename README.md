@@ -24,7 +24,7 @@ The versions of Spark, Jupyter and Ipython at the moment of writing
 More in video: [https://www.youtube.com/watch?v=7AcStx0SXSo](https://www.youtube.com/watch?v=7AcStx0SXSo) or [http://blog.jobbole.com/86232/](http://blog.jobbole.com/86232/)
 
 
-### How to integrate pyspark with Jupyter notebook
+### How to integrate pyspark with Jupyter/Ipython notebook in four ways
 
 1. Start notebook from terminal by typing jupyter (ipython notebook)
 
@@ -139,7 +139,20 @@ More in video: [https://www.youtube.com/watch?v=7AcStx0SXSo](https://www.youtube
     More in [http://stackoverflow.com/a/33065359](http://stackoverflow.com/a/33065359) or [https://www.youtube.com/watch?v=I5JtvpyM14U](ttps://www.youtube.com/watch?v=I5JtvpyM14U)
 
 ### Spark issues 
+
+  - Run GraphX on Jupyter Notebook
   
+    [https://developer.ibm.com/clouddataservices/2016/07/15/intro-to-apache-spark-graphframes/](https://developer.ibm.com/clouddataservices/2016/07/15/intro-to-apache-spark-graphframes/)
+    
+    [How do I run graphx with Python / pyspark?](http://stackoverflow.com/questions/23302270/how-do-i-run-graphx-with-python-pyspark)
+    
+    Solution:
+       
+       1. Command Line. In terminal, type in `pyspark ----packages graphframes:graphframes:0.2.0-spark2.0-s_2.11` when you start spark from terminal.
+       
+       2. Modify `kernel.json` file at `/usr/local/share/jupyter/kernels`. Find the corresponding `pyspark kernel.json` file add `pyspark --packages graphframes:graphframes:0.2.0-spark2.0-s_2.11` in `"PYSPARK_SUBMIT_ARGS"` such as `"PYSPARK_SUBMIT_ARGS": "--packages graphframes:graphframes:0.2.0-spark2.0-s_2.11 --master local[*] --deploy-mode client pyspark-shell"`.
+       
+       
   - Pyspark: Exception: Java gateway process exited before sending the driver its port number
    
     [http://stackoverflow.com/a/36367669](http://stackoverflow.com/a/36367669)
@@ -150,7 +163,7 @@ More in video: [https://www.youtube.com/watch?v=7AcStx0SXSo](https://www.youtube
 
     [http://stackoverflow.com/questions/26562033/how-to-set-apache-spark-executor-memory](http://stackoverflow.com/questions/26562033/how-to-set-apache-spark-executor-memory)
 
-   Solution: Set driver memory instead in two ways
+    Solution: Set driver memory instead in two ways
 
       1. On Spark clients (systems from which you intend to launch Spark jobs), do the following:
       
@@ -165,6 +178,8 @@ More in video: [https://www.youtube.com/watch?v=7AcStx0SXSo](https://www.youtube
       2. Start from terminal
      
        `$ ./bin/spark-shell(pyspark) --driver-memory 2g`
+    
+ 
 
 
 
