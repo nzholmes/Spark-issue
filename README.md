@@ -150,7 +150,7 @@ More in video: [https://www.youtube.com/watch?v=7AcStx0SXSo](https://www.youtube
        
        1. Command Line. In terminal, type in `pyspark ----packages graphframes:graphframes:0.2.0-spark2.0-s_2.11` when you start spark from terminal.
        
-       2. Modify `kernel.json` file at `/usr/local/share/jupyter/kernels`. Find the corresponding `pyspark kernel.json` file add `pyspark --packages graphframes:graphframes:0.2.0-spark2.0-s_2.11` in `"PYSPARK_SUBMIT_ARGS"` such as `"PYSPARK_SUBMIT_ARGS": "--packages graphframes:graphframes:0.2.0-spark2.0-s_2.11 --master local[*] --deploy-mode client pyspark-shell"`.
+       2. Modify `kernel.json` file at `/usr/local/share/jupyter/kernels`. Find the corresponding `pyspark kernel.json` file and add `pyspark --packages graphframes:graphframes:0.2.0-spark2.0-s_2.11` in `"PYSPARK_SUBMIT_ARGS"` such as `"PYSPARK_SUBMIT_ARGS": "--packages graphframes:graphframes:0.2.0-spark2.0-s_2.11 --master local[*] --deploy-mode client pyspark-shell"`.
        
        
   - Pyspark: Exception: Java gateway process exited before sending the driver its port number
